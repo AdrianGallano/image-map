@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image map</title>
+  <link rel="icon" href="./media/my-logo.png">
+  <link rel="stylesheet" href="./static/style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js\resizer\jquery.rwdImageMaps.min.js"></script>
+</head>
+<body>
+  <main>
+    <div id="container">
+      <div>
+
+      </div>
+      <div id="labels">
+        <ul id="label-container">
+          <h3>Image Map</h3>
+          <li>
+            <strong>Luzon: </strong>
+            <p>Zabali Hanging Bridge</p>
+            <div class="identifiers" data-color="red"></div>
+          </li>
+          <li>
+            <strong>Visayaz: </strong>
+            <p>Tarangban Falls</p>
+            <div class="identifiers" data-color="purple"></div>
+          </li>
+          <li>
+            <strong>Mindanao: </strong>
+            <p>Kalon Barak Skyline Ridge</p>
+            <div class="identifiers" data-color="yellow"></div>
+          </li>
+        </ul>
+      </div>
+      <div id="map-container">
+        <img src="./media/map.png" alt="Philippine map" id="map" usemap="#image_map" />
+        <map name="image_map">
+          <area target="_blank" alt="Zabali Hanging Bridge" title="Zabali Hanging Bridge"
+            href="https://www.google.com/maps/place/Zabali+Hanging+Bridge/@15.7504119,121.5690811,15z/data=!4m2!3m1!1s0x0:0x6e59116f325c8e05?sa=X&ved=2ahUKEwi-ypHMho-EAxViSWwGHUi6AFIQ_BJ6BAgPEAA"
+            coords="237,117,258,147" shape="rect" />
+          <area target="_blank" alt="Zabali Hanging Bridge" title="Zabali Hanging Bridge"
+            href="https://www.google.com/maps/place/Zabali+Hanging+Bridge/@15.7504119,121.5690811,15z/data=!4m2!3m1!1s0x0:0x6e59116f325c8e05?sa=X&ved=2ahUKEwi-ypHMho-EAxViSWwGHUi6AFIQ_BJ6BAgPEAA"
+            coords="263,125,394,139" shape="rect">
+          <area target="_blank" alt="Tarangban Falls" title="Tarangban Falls"
+            href="https://google.com/maps/place/Tarangban+Falls/@12.2518768,124.3970266,17z/data=!3m1!4b1!4m6!3m5!1s0x33a75d9b938317a5:0x1ad2d63420ec6706!8m2!3d12.2518716!4d124.3996015!16s%2Fg%2F11gzq38v2k?entry=ttu"
+            coords="360,273,380,304" shape="rect" />
+          <area target="_blank" alt="Tarangban Falls" title="Tarangban Falls"
+            href="https://google.com/maps/place/Tarangban+Falls/@12.2518768,124.3970266,17z/data=!3m1!4b1!4m6!3m5!1s0x33a75d9b938317a5:0x1ad2d63420ec6706!8m2!3d12.2518716!4d124.3996015!16s%2Fg%2F11gzq38v2k?entry=ttu"
+            coords="383,281,481,296" shape="rect">
+          <area target="_blank" alt="Kalon Barak Skyline Ridge" title="Kalon Barak Skyline Ridge"
+            href="https://www.google.com/maps/place/Kalon+Barak+Skyline+Ridge/@6.3989516,125.2262815,17z/data=!3m1!4b1!4m6!3m5!1s0x32f9d53b2eda4cc7:0x1d352c5cedf1b383!8m2!3d6.3989463!4d125.2288564!16s%2Fg%2F11dx9h8yql?entry=ttu" coords="394,529,417,561" shape="rect" />
+          <area target="_blank" alt="Kalon Barak Skyline Ridge" title="Kalon Barak Skyline Ridge" href="https://www.google.com/maps/place/Kalon+Barak+Skyline+Ridge/@6.3989516,125.2262815,17z/data=!3m1!4b1!4m6!3m5!1s0x32f9d53b2eda4cc7:0x1d352c5cedf1b383!8m2!3d6.3989463!4d125.2288564!16s%2Fg%2F11dx9h8yql?entry=ttu"
+            coords="421,539,577,553" shape="rect">
+        </map>
+      </div>
+    </div>
+  </main>
+  <script>
+    $(document).ready(function (e) {
+      $("img[usemap]").rwdImageMaps();
+    });
+  </script>
+</body>
+
+</html>
